@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#votingSection h1{
+  padding: 4vh;
+  text-decoration: underline;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6b48ff, #00ddeb);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(220, 214, 199, 0.824);
+    animation: fadeIn 1.5s ease-in-out;
+    text-decoration: underline;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 10px 0 20px;
+}
+
+#startVoting {
+    background-color: #ff4b5c;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#startVoting:hover {
+    transform: scale(1.1);
+    background-color: #e63946;
+}
+
+/* Voting Section */
+.container {
+    background-color: #fff;
+    padding: 5%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 5% auto;
+    animation: slideUp 1s ease-in-out;
+}
+
+h1 {
+    color: #2d3436;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.candidates {
+    display: flex;
+    flex-wrap: wrap; /* Allows candidates to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.candidate {
+    background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+    padding: 20px;
+    border-radius: 10px;
+    width: clamp(200px, 30%, 300px); /* Responsive width */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.candidate:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.candidate-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 33px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0652dd;
+}
+
+.result {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#voteChart {
+    max-width: 100%; /* Ensures chart fits container */
+    height: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    #startVoting {
+        padding: 12px 25px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .candidates {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidate {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .result {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    #startVoting {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .candidate {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+}

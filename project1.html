@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteSphere - Online Voting System</title>
+    <link rel="icon" href="voting-box.png">
+    <link rel="stylesheet" href="project1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>VoteSphere</h1>
+            <p>Empower Your Voice with Secure & Dynamic Voting</p>
+            <button id="startVoting">Start Voting Now</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Voting Banner" class="hero-img">
+    </div>
+
+    <div class="container" id="votingSection" style="display: none;">
+        <h1>Vote for College leader </h1>
+        <div class="candidates">
+            <div class="candidate" id="candidate1">
+                <img src="abhi1.jpg" alt="Candidate 1" class="candidate-img">
+
+                <a href="https://www.linkedin.com/in/abhishek-singh-315721281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><h3>Abhishek singh</h3></a>
+
+                
+                <p>Votes: <span id="votes1">0</span></p>
+                <button onclick="vote(1)">Vote Now</button>
+            </div>
+            <div class="candidate" id="candidate2">
+                <img src="ashish3.jpg" alt="Candidate 2" class="candidate-img">
+
+                <a href="https://www.linkedin.com/in/a-k-gupta-21a601307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><h3>Ashish Gupta</h3></a>
+
+
+                <p>Votes: <span id="votes2">0</span></p>
+                <button onclick="vote(2)">Vote Now</button>
+            </div>
+            <div class="candidate" id="candidate3">
+                <img src="sachin2.jpg" alt="Candidate 3" class="candidate-img">
+
+                <a href="https://www.linkedin.com/in/sachin-singh-9b4725269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><h3>Sachin singh</h3></a>
+                
+                <p>Votes: <span id="votes3">0</span></p>
+                <button onclick="vote(3)">Vote Now</button>
+            </div>
+            
+        </div>
+        <div class="result">
+            <h2>Live Results</h2>
+            <canvas id="voteChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- this is chart js open souce java script library -->
+
+    <script src="project1.js">
+    </script>
+
+      <script>
+
+          alert("Welcome for Votting");
+      </script>
+
+
+
+</body>
+</html>

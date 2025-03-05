@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="icon" href="login.png">
+  <style>
+    /* Same CSS as before for styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #a371da, #cd4a82);
+    }
+
+    .container {
+      background: rgb(125 211 235 / 90%);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .container p{
+        margin: 1vh;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      background: #f9f9f9;
+    }
+
+    .input-group input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background: transparent;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1a5ec8;
+    }
+
+     /* .fixed{
+    height: 15vh;
+    width: 5vw;
+    position: fixed;
+    top: 40%;
+    right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    }
+    .fixed img{
+      position: absolute;
+      height: 7vh;
+      width: 4vw;
+      right: 1px;
+      
+    }  */
+     
+  </style>
+</head>
+<body>
+
+  <!-- <div class="fixed">
+    <div id="abhi1">
+      <a href="http://127.0.0.1:5500/project/project1.html"><img src="whatsapp.png" alt="loading">
+      </a>
+    </div>
+  </div> -->
+
+       
+
+
+
+  <div class="container">
+    <h2>Welcome</h2>
+    <p>Login to your account</p>
+
+    <div class="input-group">
+      <input id="email" type="email" placeholder="abhisheksingh13722@gmail.com" required>
+    </div>
+
+    <div class="input-group">
+      <input id="password" type="password" placeholder="Singh@123" required>
+    </div>
+
+    <button class="btn" id="loginBtn">Login</button>
+  </div>
+
+  <script>
+    // Predefined credentials for demonstration
+    const validEmail = "abhisheksingh13722@gmail.com";
+    const validPassword = "Singh@123";
+
+    // Event listener for the login button
+    document.getElementById("loginBtn").addEventListener("click", function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Validate the credentials
+      if (email === validEmail && password === validPassword) {
+        // Redirect to a new page if valid
+        window.location.href = "project1.html"; // Replace with your desired page
+      } else {
+        alert("Invalid email or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
